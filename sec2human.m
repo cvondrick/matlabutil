@@ -1,3 +1,5 @@
+% Converts the time-in-seconds to a more human readable format, by
+% automatically picking whether to use seconds, minutes, hours, or days.
 function [s, units] = sec2human(s),
 units = 'sec';
 

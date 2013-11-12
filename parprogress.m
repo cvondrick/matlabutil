@@ -1,3 +1,16 @@
+% This function is a progress bar for parfor loops. Its usage
+% follows the pattern:
+%
+% >> n = 100;
+% >> pp = parprogress('some operation', n); % start progress bar
+% >> parfor i=1:n,
+% >>   some_operation(i);
+% >>   parogress(pp); % update progress bar by 1
+% >> end
+% >> parprogress(pp, 'done'); % declare operation done
+%
+% The function implements a variety of terminal hacks to make this display,
+% so it may be buggy. But, usually it works.
 function ret = parprogress(msg, x),
 
 persistent lastid;

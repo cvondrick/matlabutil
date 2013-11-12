@@ -1,3 +1,16 @@
+% fprintf() with update
+%
+% It prints to the screen, but deletes the previous line first. This is useful
+% for long running jobs when you want to print a status, but not cause your
+% terminal to scroll.
+%
+% Usage:
+% >> uprintf('hello there');
+% >> uprintf('hello %s!\n', 'carl');
+% >> uprintf();
+% >> uprintf('goodbye');
+%
+% The empty call to uprintf() tells it to stop deleting until the next command.
 function uprintf(fid, varargin)
 
 if exist('fid'),

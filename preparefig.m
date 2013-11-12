@@ -1,3 +1,5 @@
+% Prepares the figure for better printing into papers. Call this
+% function before calling 'print()'
 function preparefig(h),
 
 if ~exist('h', 'var'),

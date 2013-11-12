@@ -1,3 +1,12 @@
+% Plots precision-recall curves. 
+%
+% 'corr' is a vector indicating which predictions are correct, where
+% 1=correct, and 0=incorrect. It should be sorted in the order of
+% decreasing scores, with the top scoring prediction being first.
+%
+% 'numtrue' is the number of actual elements in the testing set.
+%
+% 'varargin' are plotting commands applied to the graph.
 function ap = plotAP(corr, numtrue, varargin),
 
 rec = cumsum(corr) / numtrue;

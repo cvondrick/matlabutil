@@ -1,3 +1,7 @@
+% M = montage(images[, cy, cx[, pad]])
+%
+% Takes the cell array 'images' and displays the first
+% cy*cx images of them on a grid, with 'pad' pixels in between.
 function M = montage(images, cy, cx, pad),
 
 if isnumeric(images),

@@ -1,3 +1,11 @@
+% fprintf with time
+%
+% It prints a status message, as well as how long the operation took.
+%
+% Usage is simple:
+% >> tprintf('some operation');
+% >> some_operation();
+% >> tprintf();
 function tprintf(fmt, varargin)
 
 persistent th;

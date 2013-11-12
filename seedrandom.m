@@ -1,3 +1,6 @@
+% Generates a random seed for MATLAB that is robust against many problems that
+% crop up when laucning jobs on the cluster. It is better than just seeding
+% with the clock since cluster jobs may start at the *exact* same time.
 function seed = seedrandom(),
 
 [~, hostname] = system('hostname');

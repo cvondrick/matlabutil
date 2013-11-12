@@ -1,3 +1,14 @@
+% A progress bar for MATLAB in the terminal.
+%
+% Its usage follows a simple pattern:
+% >> for i=1:n,
+% >>   some_operation(i);
+% >>   progress('some operation', i, n);
+% >> end
+%
+% This will show a progress bar on the terminal, as well other statistics
+% such as how long the operation has been running, or a prediction on how
+% long it is going to take.
 function progress(fid, msg, i, n, delayed),
 
 if isstr(fid),
