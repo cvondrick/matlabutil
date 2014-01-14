@@ -12,16 +12,16 @@ fprintf('l2 difference = %f\n', d);
 clf;
 
 subplot(221);
-plot(b(iii), 'ro');
-hold on;
 plot(a(iii), 'b+');
+hold on;
+plot(b(iii), 'ro');
 legend('a', 'b');
 
 subplot(223);
 plot(a(jjj), 'b+');
 hold on;
 plot(b(jjj), 'ro');
-legend('b', 'a');
+legend('a', 'b');
 
 subplot(222);
 plot(a - b, 'k+');
