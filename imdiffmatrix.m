@@ -38,6 +38,8 @@ for i=1:n,
   end
 end
 
+im = repmat(im, [1 1 3]);
+
 if nargout == 0,
   imagesc(im);
   axis image;
