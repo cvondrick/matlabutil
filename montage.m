@@ -5,9 +5,18 @@
 function M = montage(images, cy, cx, pad),
 
 if isnumeric(images),
-  imagescell = cell(size(images, 4), 1);
-  for i=1:size(images,3),
-    imagescell{i} = images(:, :, i);
+  rgb = length(size(images)) == 4 && size(images,3) == 3;
+
+  if rgb,
+    imagescell = cell(size(images, 4), 1);
+    for i=1:size(images,4),
+      imagescell{i} = images(:, :, i);
+    end
+  else,
+    imagescell = cell(size(images, 3), 1);
+    for i=1:size(images,3),
+      imagescell{i} = images(:, :, i);
+    end
   end
   images = imagescell;
 end
@@ -27,6 +36,11 @@ if cy < 0 && cx > 0,
 end
 if cx < 0 && cy > 0,
   cx = ceil(length(images) / cy);
+end
+
+if length(images) == 0,
+  M = [];
+  return;
 end
 
 ny = size(images{1}, 1)+pad*2;
