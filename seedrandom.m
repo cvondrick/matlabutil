@@ -19,4 +19,4 @@ seed = mod(seed, 2^31);
 
 rng(seed);
 
-fprintf('random seed set to %i = %i * %i * %i\n', seed, hostname, randnum, pid);
+fprintf('random seed set to %i\n', seed);

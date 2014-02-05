@@ -31,7 +31,7 @@ persistent tcount;
 persistent tlasti;
 
 if isempty(t) || i <= 1 || i < tlasti,
-  uprintf(fid);
+  %uprintf(fid);
   t = tic();
   tcount = 0;
   tlasti = 0;
