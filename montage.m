@@ -10,7 +10,7 @@ if isnumeric(images),
   if rgb,
     imagescell = cell(size(images, 4), 1);
     for i=1:size(images,4),
-      imagescell{i} = images(:, :, i);
+      imagescell{i} = images(:, :, :, i);
     end
   else,
     imagescell = cell(size(images, 3), 1);
