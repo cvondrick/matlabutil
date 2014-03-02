@@ -51,8 +51,10 @@ M = ones(ny*cy, nx*cx, nf);
 c = 1;
 for j=1:cy,
   for i=1:cx,
-    im = padarray(images{c}, [pad pad 0], 1);
+    im = padarray(im2double(images{c}), [pad pad 0], 1);
     im = imresize(im, [ny nx]);
+    im(im > 1) = 1;
+    im(im < 0) = 0;
     M((j-1)*ny+1:j*ny, (i-1)*nx+1:i*nx, :) = im;
     c = c + 1;
     if c > length(images),
