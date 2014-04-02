@@ -17,6 +17,5 @@ pid = feature('getpid');
 seed = hostname * randnum * pid;
 seed = mod(seed, 2^31);
 
-rng(seed);
-
 fprintf('random seed set to %i\n', seed);
+rng(seed);
