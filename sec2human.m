@@ -17,3 +17,7 @@ if s > 60,
     end
   end
 end
+
+if nargout == 1,
+  s = sprintf('%0.2f %s', s, units);
+end
